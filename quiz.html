@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>English Story Quiz</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #f9f9f9, #e3f2fd);
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #1565c0;
+      text-shadow: 1px 1px #90caf9;
+    }
+    .section {
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px auto;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      max-width: 800px;
+    }
+    .question {
+      margin-bottom: 15px;
+      padding: 10px;
+      border-left: 5px solid #42a5f5;
+      background: #f1f8ff;
+      border-radius: 5px;
+    }
+    .question:hover {
+      background: #e3f2fd;
+    }
+    button {
+      display: block;
+      margin: 20px auto;
+      padding: 12px 25px;
+      background: #42a5f5;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #1565c0;
+    }
+    .correct { color: green; font-weight: bold; }
+    .incorrect { color: red; font-weight: bold; }
+    #results {
+      margin-top: 20px;
+      padding: 15px;
+      background: #fff3e0;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .progress-bar {
+      width: 100%;
+      background: #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-top: 10px;
+    }
+    .progress {
+      height: 20px;
+      background: #42a5f5;
+      width: 0%;
+      transition: width 0.5s;
+    }
+  </style>
+</head>
+<body>
+  <h1>✨ English Story Quiz - Check Yourself ✨</h1>
+  <h4> Note : Kindly Use Small letters Only </h4>
+
+  <form id="quizForm">
+    <!-- MCQs -->
+    <div class="section">
+      <h2>🔹 Objective Type Questions</h2>
+      <div class="question">
+        <p>Q1. Who is the main character of the Play ?</p>
+        <label><input type="radio" name="q1" value="Leela Devi"> Leela Devi</label><br>
+        <label><input type="radio" name="q1" value="Iqbal"> Iqbal</label><br>
+        <label><input type="radio" name="q1" value="Guru Nabin Sharma"> Guru Nabin Sharma</label><br>
+        <label><input type="radio" name="q1" value="Shruti Sharma"> Shruti Sharma</label>
+      </div>
+      <div class="question">
+        <p>Q2. What is Shruti's Passion in Music ?</p>
+        <label><input type="radio" name="q2" value="Indo-Western Fusion"> Indo-Western Fusion</label><br>
+        <label><input type="radio" name="q2" value="Western Pop"> Western Pop</label><br>
+        <label><input type="radio" name="q2" value="Hindustan Classical"> Hindustan Classical</label><br>
+        <label><input type="radio" name="q2" value="Carnatic Music"> Carnatic Music</label>
+      </div>
+      <div class="question">
+        <p>Q3. Who strongly represents tradition in the play ?</p>
+        <label><input type="radio" name="q3" value="Guru Nabin Sharma"> Guru Nabin Sharma</label><br>
+        <label><input type="radio" name="q3" value="Iqbal"> Iqbal</label><br>
+        <label><input type="radio" name="q3" value="Shruti Sharma"> Shruti Sharma</label><br>
+        <label><input type="radio" name="q3" value="Peter"> Peter</label>
+      </div>
+      <div class="question">
+        <p>Q4. What does Shruti fear the most in the beggining ?</p>
+        <label><input type="radio" name="q4" value="Stage Fright"> Stage Fright</label><br>
+        <label><input type="radio" name="q4" value="Her Father's Dissaproval"> Her Father's Dissapproval</label><br>
+        <label><input type="radio" name="q4" value="Forgetting Lyrics"> Forgetting Lyrics</label><br>
+        <label><input type="radio" name="q4" value="Losing her Friends"> Losing her friends</label>
+      </div>
+      <div class="question">
+        <p>Q5. What role did the Leela Devi played in the Story ?</p>
+        <label><input type="radio" name="q5" value="Shruti's Mother"> Shruti's Mother</label><br>
+        <label><input type="radio" name="q5" value="Shruti's Friend and Supporter"> Shruti's Friend and Supporter</label><br>
+        <label><input type="radio" name="q5" value="Shruti's Teacher"> Shruti's Teacher</label><br>
+        <label><input type="radio" name="q5" value="Music Critic"> Music Critic</label>
+      </div>
+      <div class="question">
+        <p>Q6. The fusion of Hindustani classical and Indo‑Western music in the play primarily represents: </p>
+        <label><input type="radio" name="q6" value="Competition between two art forms"> Competition between two art forms</label><br>
+        <label><input type="radio" name="q6" value="The decline of traditional values"> The decline of traditional values</label><br>
+        <label><input type="radio" name="q6" value="Unity in diversity and coexistence of cultures"> Unity in diversity and coexistence of cultures</label><br>
+        <label><input type="radio" name="q6" value="A temporary experiment without deeper meaning"> A temporary experiment without deeper meaning</label>
+      </div>
+      <div class="question">
+        <p>Q7. What does the title Twin Melodies Symbolize ?</p>
+        <label><input type="radio" name="q7" value="Fusion of Tradition and Modernity"> Fusion of Tradition and Modernity</label><br>
+        <label><input type="radio" name="q7" value="Two Sisters Singing"> Two Sisters Singing</label><br>
+        <label><input type="radio" name="q7" value="Competition between Musicians"> Competition between Musicians</label><br>
+        <label><input type="radio" name="q7" value="A duet Performance"> A duet Performance</label>
+      </div>
+      <div class="question">
+        <p>Q8. The conflict between Shruti and Guru Nabin Sharma can best be seen as: </p>
+        <label><input type="radio" name="q8" value="A personal disagreement about music styles"> A personal disagreement about music styles</label><br>
+        <label><input type="radio" name="q8" value="A rejection of all forms of tradition"> A rejection of all forms of tradition</label><br>
+        <label><input type="radio" name="q8" value="A generational clash limited to family issues"> A generational clash limited to family issues</label><br>
+        <label><input type="radio" name="q8" value="A symbolic struggle between cultural preservation and global innovation"> A symbolic struggle between cultural preservation and global innovation</label>
+      </div>
+      <div class="question">
+        <p>Q9. Which of the following best reflects the deeper philosophical message of Twin Melodies ?</p>
+        <label><input type="radio" name="q9" value="Art is valuable only when it follows strict rules"> Art is valuable only when it follows strict rules</label><br>
+        <label><input type="radio" name="q9" value="True beauty lies in diversity blending with respect"> True beauty lies in diversity blending with respect</label><br>
+        <label><input type="radio" name="q9" value="Modernity must replace tradition for progress"> Modernity must replace tradition for progress</label><br>
+        <label><input type="radio" name="q9" value="Family bonds are secondary to personal ambition"> Family bonds are secondary to personal ambition</label>
+      </div>
+      <div class="question">
+        <p>Q10. The reconciliation between Shruti and Guru Nabin Sharma at the end of the play primarily symbolizes: </p>
+        <label><input type="radio" name="q10" value="The victory of modernity over tradition"> The victory of modernity over tradition</label><br>
+        <label><input type="radio" name="q10" value="The rejection of cultural heritage"> The rejection of cultural heritage</label><br>
+        <label><input type="radio" name="q10" value="The harmony achieved when tradition and innovation coexist"> The harmony achieved when tradition and innovation coexist</label><br>
+        <label><input type="radio" name="q10" value="The dominance of Western music in Indian culture"> The dominance of Western music in Indian culture</label>
+      </div>
+      <div class="question">
+        <p>Q11.Which of the following best explains the metaphorical role of music in Twin Melodies ?</p>
+        <label><input type="radio" name="q11" value=" It highlights the superiority of Western culture over Indian tradition">  It highlights the superiority of Western culture over Indian tradition</label><br>
+        <label><input type="radio" name="q11" value=" It symbolizes the reconciliation of differences and harmony in life">  It symbolizes the reconciliation of differences and harmony in life</label><br>
+        <label><input type="radio" name="q11" value="It portrays the failure of communication between generations"> It portrays the failure of communication between generations</label><br>
+        <label><input type="radio" name="q11" value=" It is only a source of entertainment for the characters">  It is only a source of entertainment for the characters</label>
+      </div>
+      <div class="question">
+        <p>Q12. What is the overall message of Twin Melodies ?</p>
+        <label><input type="radio" name="q12" value=" Tradition must dominate modernity">  Tradition must dominate modernity</label><br>
+        <label><input type="radio" name="q12" value="Courage and honesty lead to harmony"> Courage and honesty lead to harmony</label><br>
+        <label><input type="radio" name="q12" value="Music is only for entertainment"> Music is only for entertainment</label><br>
+        <label><input type="radio" name="q12" value="Family bonds are unimportant"> Family bonds are unimportant</label>
+      </div>
+      <div class="question">
+      <p>Q13. Assertion - Reasoning Type Questions<br>
+      <b>Assertion (A):</b> Shruti chooses Indo‑Western fusion because she wants to express her individuality.<br>
+      <b>Reason (R):</b> Fusion music symbolizes the rejection of all traditional values.
+      </p>
+        <label><input type="radio" name="q13" value="A"> A) Both A and R are true, and R is the correct explanation of A</label><br>
+        <label><input type="radio" name="q13" value="B"> B) Both A and R are true, but R is not the correct explanation of A</label><br>
+        <label><input type="radio" name="q13" value="C"> C) A is true but R is false</label><br>
+        <label><input type="radio" name="q13" value="D"> D) A is false but R is true</label>
+      </div>
+      </div>
+      <div class="question">
+      <p>Q14. Assertion - Reasoning Type Questions<br>
+      <b>Assertion (A):</b> Guru Nabin Sharma initially opposes Shruti’s passion for fusion music.<br>
+      <b>Reason (R):</b> He believes that classical Hindustani music must be preserved without compromise.
+      </p>
+        <label><input type="radio" name="q14" value="A"> A) Both A and R are true, and R is the correct explanation of A</label><br>
+        <label><input type="radio" name="q14" value="B"> B) Both A and R are true, but R is not the correct explanation of A</label><br>
+        <label><input type="radio" name="q14" value="C"> C) A is true but R is false</label><br>
+        <label><input type="radio" name="q14" value="D"> D) A is false but R is true</label>
+      </div>
+      <div class="question">
+      <p>Q15. Shruti’s father, Guru Nabin Sharma, is a classical Hindustani musician.</p>
+        <label><input type="radio" name="q15" value="True"> True</label><br>
+        <label><input type="radio" name="q15" value="False"> False</label>
+      </div>
+      <div class="question">
+      <p>Q16. The play suggests that fusion music completely replaces classical tradition.</p>
+        <label><input type="radio" name="q16" value="True"> True</label><br>
+        <label><input type="radio" name="q16" value="False"> False</label>
+      </div>
+
+    </div>
+
+    <!-- Short Answers -->
+    <div class="section">
+      <h2>✍️ Short Answer Questions</h2>
+      <div class="question">
+        <p>Q17. Who supports Shruti in her passion for fusion music?</p>
+        <input type="text" name="q17">
+      </div>
+      <div class="question">
+        <p>Q18.  What does Shruti’s honesty towards her father show?</p>
+        <input type="text" name="q18">
+      </div>
+      <div class="question">
+        <p>Q19. How does the play Twin Melodies convey the importance of reconciliation in family relationships?</p>
+        <input type="text" name="q19">
+      </div>
+      <!-- Add Q12–Q15 similarly -->
+    </div>
+
+    <!-- HOTS -->
+    <div class="section">
+      <h2>🔥 HOTS Question</h2>
+      <div class="question">
+        <p>Q20. How does Twin Melodies use music as a metaphor to address social and cultural conflicts?</p>
+        <textarea name="q20" rows="4" cols="50"></textarea>
+      </div>
+      <div class="question">
+        <p>Q21.If Shruti had not been honest with her father about her passion, how might the message of the play have changed?</p>
+        <textarea name="q21" rows="4" cols="50"></textarea>
+      </div>
+    </div>
+
+    <button type="button" onclick="checkAnswers()">Check Answers ✅</button>
+</form>
+
+<div id="results"></div>
+<div class="progress-bar"><div class="progress" id="progress"></div></div>
+
+<script>
+function checkAnswers() {
+  let score = 0;
+  let results = "";
+
+  // MCQ / True-False / Assertion-Reason answers (1 mark each)
+  const mcqAnswers = {
+    q1: "Shruti Sharma",
+    q2: "Indo-Western Fusion",
+    q3: "Guru Nabin Sharma",
+    q4: "Her Father's Dissaproval",
+    q5: "Shruti's Friend and Supporter",
+    q6: "Unity in diversity and coexistence of cultures",
+    q7: "Fusion of Tradition and Modernity",
+    q8: "A symbolic struggle between cultural preservation and global innovation",
+    q9: "True beauty lies in diversity blending with respect",
+    q10: "The harmony achieved when tradition and innovation coexist",
+    q11: "It symbolizes the reconciliation of differences and harmony in life",
+    q12: "Courage and honesty lead to harmony",
+    q13: "C",   // Assertion-Reason
+    q14: "A",   // Assertion-Reason
+    q15: "True",
+    q16: "False"
+  };
+
+  // Short Answer keywords (2 marks each)
+  const shortAnswers = {
+    q17: ["Leela Devi"], 
+    q18: ["courage","truthfulness"], 
+    q19: ["respect","generational gap","family bonds"]
+  };
+
+  // HOTS keywords (4 marks each)
+  const hotsAnswers = {
+    q20: ["tradition","diversity","harmony"], 
+    q21: ["honesty","family bonds","message of harmony"]
+  };
+
+  // MCQs (1 mark each)
+  for (let q in mcqAnswers) {
+    let selected = document.querySelector(`input[name="${q}"]:checked`);
+    if (selected) {
+      if (selected.value === mcqAnswers[q]) {
+        score += 1;
+        results += `<p>${q}: <span class="correct">Correct (+1)</span></p>`;
+      } else {
+        results += `<p>${q}: <span class="incorrect">Incorrect</span></p>`;
+      }
+    } else {
+      results += `<p>${q}: <span class="incorrect">Not Answered</span></p>`;
+    }
+  }
+
+  // Short Answers (2 marks each, keyword match)
+  for (let q in shortAnswers) {
+    let ans = document.querySelector(`input[name="${q}"]`).value.trim().toLowerCase();
+    let keywords = shortAnswers[q].map(k => k.toLowerCase());
+    let matched = false;
+
+    if (q === "q18") {
+      // courage OR truthfulness
+      matched = keywords.some(word => ans.includes(word));
+    } else if (q === "q19") {
+      // respect AND (generational gap OR family bonds)
+      matched = ans.includes("respect") && (ans.includes("generational gap") || ans.includes("family bonds"));
+    } else {
+      // default: must include all keywords
+      matched = keywords.every(word => ans.includes(word));
+    }
+
+    if (matched) {
+      score += 2;
+      results += `<p>${q}: <span class="correct">Correct (+2)</span></p>`;
+    } else {
+      results += `<p>${q}: <span class="incorrect">Expected keywords: ${keywords.join(" / ")}</span></p>`;
+    }
+  }
+
+  // HOTS (4 marks each, keyword match)
+  for (let q in hotsAnswers) {
+    let element = document.querySelector(`textarea[name="${q}"], input[name="${q}"]`);
+    if (!element) continue; // skip if not found
+    let ans = element.value.trim().toLowerCase();
+    let keywords = hotsAnswers[q].map(k => k.toLowerCase());
+    let matched = false;
+    
+
+    if (q === "q20") {
+      // tradition OR diversity OR harmony
+      matched = keywords.some(word => ans.includes(word));
+    } else if (q === "q21") {
+      // honesty AND (family bonds OR message of harmony)
+      matched = ans.includes("honesty") && (ans.includes("family bonds") || ans.includes("message of harmony"));
+    }
+
+    if (matched) {
+      score += 4;
+      results += `<p>${q}: <span class="correct">Correct (+4)</span></p>`;
+    } else {
+      results += `<p>${q}: <span class="incorrect">Expected keywords: ${keywords.join(" / ")}</span></p>`;
+    }
+  }
+
+  // Final Results
+  document.getElementById("results").innerHTML = `<h2>Results</h2>${results}<p>Total Score: ${score}/40</p>`;
+  document.getElementById("progress").style.width = (score/40*100) + "%";
+}
+</script>
+</body>
+</html>
+
